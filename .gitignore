@@ -1,3 +1,357 @@
-#Hey everyone this is the program
-y = 3 
-print(y)
+"""
+Created on Wed Oct  2 12:04:35 2019
+
+@author: caden
+"""
+#By submitting this assignment, all team members agree to the following:
+#“Aggies do not lie, cheat, or steal, or tolerate those who do”
+#“I have not given or received any unauthorized aid on this assignment”
+# 
+#Names:                           	Spencer Landrum
+#          	                          	Huong Vo
+#           	                          	Joshua Protain
+#                                        	Caden Mueller
+#Section:                          	417
+#Assignment:    	Lab 6, Activity 1
+#Date:                	01 October 2019
+Gender = str(input('Enter your gender Male or Female: '))
+Age = int(input('Enter your age: '))
+Total_Cholesterol = int(input('Enter your total cholesterol: '))
+Smoker = str(input('Do you smoke, Yes or No: '))
+HDL = int(input('Enter your HDL: '))
+Treat = str(input('Is your systolic BP treated, Yes or No: '))
+Systolic_BP = int(input('Enter your systolic BP: '))
+Point_Total = 0
+if Gender == 'Male':
+    if Age >= 20 and Age < 35:
+        Point_Total -= 9
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 4 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 7
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 9
+        if Total_Cholesterol >= 280:
+            Point_Total += 11
+        if Smoker == 'Yes' :
+            Point_Total += 8 
+    if Age >= 35 and Age < 40:
+        Point_Total -= 4
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 4 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 7
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 9
+        if Total_Cholesterol >= 280:
+            Point_Total += 11
+        if Smoker == 'Yes' :
+            Point_Total += 8 
+    if Age >= 40 and Age < 45:
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 3 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 5
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 6
+        if Total_Cholesterol >= 280:
+            Point_Total += 8
+        if Smoker == 'Yes' :
+            Point_Total += 5
+    if Age >= 45 and Age < 50:
+        Point_Total += 3
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 3 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 5
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 6
+        if Total_Cholesterol >= 280:
+            Point_Total += 8
+        if Smoker == 'Yes' :
+            Point_Total += 5
+    if Age >= 50 and Age < 55:
+        Point_Total += 6
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 2 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 3
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 4
+        if Total_Cholesterol >= 280:
+            Point_Total += 5
+        if Smoker == 'Yes' :
+            Point_Total += 3 
+    if Age >= 55 and Age < 60:
+        Point_Total += 8
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 2 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 3
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 4
+        if Total_Cholesterol >= 280:
+            Point_Total += 5
+        if Smoker == 'Yes' :
+            Point_Total += 3
+    if Age >= 60 and Age < 65:
+        Point_Total += 10
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 1 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 1
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 2
+        if Total_Cholesterol >= 280:
+            Point_Total += 3
+        if Smoker == 'Yes' :
+            Point_Total += 1
+    if Age >= 65 and Age < 70:
+        Point_Total += 11
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 1 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 1
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 2
+        if Total_Cholesterol >= 280:
+            Point_Total += 3
+        if Smoker == 'Yes' :
+            Point_Total += 1
+    if Age >= 70 and Age < 75:
+        Point_Total += 12
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 1
+        if Total_Cholesterol >= 280:
+            Point_Total += 1
+        if Smoker == 'Yes' :
+            Point_Total += 1
+    if Age >= 70 and Age < 75:
+        Point_Total += 13
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 1
+        if Total_Cholesterol >= 280:
+            Point_Total += 1
+        if Smoker == 'Yes' :
+            Point_Total += 1
+    if HDL >= 60:
+        Point_Total -= 1
+    if HDL < 50 and HDL >= 40:
+        Point_Total += 1
+    if HDL < 40:
+        Point_Total += 2
+    if Treat == 'Yes':
+        if Systolic_BP >= 120 and Systolic_BP < 130:
+            Point_Total += 1 
+        if Systolic_BP >= 130 and Systolic_BP < 160:
+            Point_Total += 2
+        if Systolic_BP >= 160:
+            Point_Total += 3
+    if Treat == 'No':
+         if Systolic_BP >= 130 and Systolic_BP < 160:
+            Point_Total += 1
+         if Systolic_BP >= 160:
+            Point_Total += 2
+    if Point_Total < 0:
+        print('Your ten year risk is less than 1 percent')
+    if Point_Total == 0:
+        print('Your ten year risk is 1 percent')
+    if Point_Total >= 1 and Point_Total <= 4:
+        print('Your ten year risk is 1 percent')
+    if Point_Total == 5 or Point_Total == 6:
+        print('Your ten year risk is 2 percent')
+    if Point_Total == 7:
+        print('Your ten year risk is 3 percent')
+    if Point_Total == 8:
+        print('Your ten year risk is 4 percent')
+    if Point_Total == 9:
+        print('Your ten year risk is 5 percent')
+    if Point_Total == 10:
+        print('Your ten year risk is 6 percent')
+    if Point_Total == 11:
+        print('Your ten year risk is 8 percent')
+    if Point_Total == 12:
+        print('Your ten year risk is 10 percent')
+    if Point_Total == 13:
+        print('Your ten year risk is 12 percent')
+    if Point_Total == 14:
+        print('Your ten year risk is 16 percent')
+    if Point_Total == 15:
+        print('Your ten year risk is 20 percent')
+    if Point_Total == 16:
+        print('Your ten year risk is 25 percent')
+    if Point_Total >= 17:
+        print('Your ten year risk is greater than 3 percent')
+
+if Gender == 'Female':
+    if Age >= 20 and Age < 35:
+        Point_Total -= 7
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 4 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 8
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 11
+        if Total_Cholesterol >= 280:
+            Point_Total += 13
+        if Smoker == 'Yes' :
+            Point_Total += 9 
+    if Age >= 35 and Age < 40:
+        Point_Total -= 3
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 4 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 8
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 11
+        if Total_Cholesterol >= 280:
+            Point_Total += 13
+        if Smoker == 'Yes' :
+            Point_Total += 9 
+    if Age >= 40 and Age < 45:
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 3 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 6
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 8
+        if Total_Cholesterol >= 280:
+            Point_Total += 10
+        if Smoker == 'Yes' :
+            Point_Total += 7
+    if Age >= 45 and Age < 50:
+        Point_Total += 3
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 3 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 6
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 8
+        if Total_Cholesterol >= 280:
+            Point_Total += 10
+        if Smoker == 'Yes' :
+            Point_Total += 7
+    if Age >= 50 and Age < 55:
+        Point_Total += 6
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 2 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 4
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 5
+        if Total_Cholesterol >= 280:
+            Point_Total += 7
+        if Smoker == 'Yes' :
+            Point_Total += 4 
+    if Age >= 55 and Age < 60:
+        Point_Total += 8
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 2 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 4
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 5
+        if Total_Cholesterol >= 280:
+            Point_Total += 7
+        if Smoker == 'Yes' :
+            Point_Total += 4
+    if Age >= 60 and Age < 65:
+        Point_Total += 10
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 1 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 2
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 3
+        if Total_Cholesterol >= 280:
+            Point_Total += 4
+        if Smoker == 'Yes' :
+            Point_Total += 2
+    if Age >= 65 and Age < 70:
+        Point_Total += 12
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 1 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 2
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 3
+        if Total_Cholesterol >= 280:
+            Point_Total += 4
+        if Smoker == 'Yes' :
+            Point_Total += 2
+    if Age >= 70 and Age < 75:
+        Point_Total += 14
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 1 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 1
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 2
+        if Total_Cholesterol >= 280:
+            Point_Total += 2
+        if Smoker == 'Yes' :
+            Point_Total += 1
+    if Age >= 70 and Age < 75:
+        Point_Total += 16
+        if Total_Cholesterol >= 160 and Total_Cholesterol < 200:
+            Point_Total += 1 
+        if Total_Cholesterol >= 200 and Total_Cholesterol < 240:
+            Point_Total += 1
+        if Total_Cholesterol >= 240 and Total_Cholesterol < 280:
+            Point_Total += 2
+        if Total_Cholesterol >= 280:
+            Point_Total += 2
+        if Smoker == 'Yes' :
+            Point_Total += 1
+    if HDL >= 60:
+        Point_Total -= 1
+    if HDL < 50 and HDL >= 40:
+        Point_Total += 1
+    if HDL < 40:
+        Point_Total += 2
+    if Treat == 'Yes':
+        if Systolic_BP >= 120 and Systolic_BP < 130:
+            Point_Total += 3 
+        if Systolic_BP >= 130 and Systolic_BP < 140:
+            Point_Total += 4
+        if Systolic_BP >= 140 and Systolic_BP < 160:
+            Point_Total += 5
+        if Systolic_BP >= 160:
+            Point_Total += 6
+    if Treat == 'No':
+         if Systolic_BP >= 120 and Systolic_BP < 130:
+            Point_Total += 1
+         if Systolic_BP >= 130 and Systolic_BP < 140:
+            Point_Total += 2
+         if Systolic_BP >= 140 and Systolic_BP < 160:
+            Point_Total += 3
+         if Systolic_BP >= 160:
+            Point_Total += 4
+    if Point_Total < 9:
+        print('Your ten year risk is less than 1 percent')
+    if Point_Total <= 9 and Point_Total <= 12:
+        print('Your ten year risk is 1 percent')
+    if Point_Total == 13 or Point_Total == 14:
+        print('Your ten year risk is 2 percent')
+    if Point_Total == 15:
+        print('Your ten year risk is 3 percent')
+    if Point_Total == 16:
+        print('Your ten year risk is 4 percent')
+    if Point_Total == 17:
+        print('Your ten year risk is 5 percent')
+    if Point_Total == 18:
+        print('Your ten year risk is 6 percent')
+    if Point_Total == 19:
+        print('Your ten year risk is 8 percent')
+    if Point_Total == 20:
+        print('Your ten year risk is 11 percent')
+    if Point_Total == 21:
+        print('Your ten year risk is 14 percent')
+    if Point_Total == 22:
+        print('Your ten year risk is 17 percent')
+    if Point_Total == 23:
+        print('Your ten year risk is 22 percent')
+    if Point_Total == 24:
+        print('Your ten year risk is 27 percent')
+    if Point_Total >= 25:
+        print('Your ten year risk is greater than 30 percent')
