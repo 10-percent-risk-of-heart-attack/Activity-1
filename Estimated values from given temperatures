@@ -3,7 +3,7 @@
 T = float(input('Input temperature: '))
 P = float(input('Pressure: '))
 
-
+# Caden Mueller: The following code cover the pressure = 5 and temperature 0 - 140
 if (P > 0) and (P <= 5) and (T <= 260):
     if T == 0:
         V = 0.0009977
@@ -157,6 +157,7 @@ if (P > 0) and (P <= 5) and (T <= 260):
         IE = 586.80
         Enthalpy = 592.18
         Entropy = 1.7344
+# Huong Vo: The following code covers the pressure = 5 and temperatures 140- 260.
     if T > 140 and T < 160:
         Tmin = 140
         Tmax = 160
