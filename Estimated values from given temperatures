@@ -284,68 +284,7 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Enthalpy = 1134.9
         Entropy = 2.8841
 
-def temp_range(temp_min,temp_max,temp):
-    range_temp = (temp - temp_min)/(temp_max-temp)
-    return range_temp
-def value(string, temp_range, v_max, v_min):
-    value = (temp_range)*(v_max - v_min) + v_min
-    print('The estimated %s is %f.' %(string,value))
-def edge (volume,in_energy,enthapy,entropy):
-    print('The exact volume is %f'%volume)
-    print('The exact internal energy is %f'%in_energy)
-    print('The exact enthapy is %f'%enthapy)
-    print('The exact entropy is %f'%entropy)
-if (P == 5) & (T >= 140) &(T <= 260):
-    if T == 140:
-        edge(0.0010768,586.8,592.18,1.7344)
-    elif (T > 140) & (T < 160):
-        temp = temp_range(140,160,T)
-        value('volume',temp, 0.0010988,0.0010769)
-        value('internal energy',temp, 672.55,586.8)
-        value('enthapy',temp,678.04,592.18)
-        value('entropy',temp, 1.9374,1.7344)
-    elif T == 160:
-        edge(0.0010988,672.55,678.04,1.9374)
-    elif (T > 160) & (T < 180):
-        temp = temp_range(140,160,T)
-        value('volume',temp, 0.0011240,0.0010988)
-        value('internal energy',temp, 759.47,672.55)
-        value('enthapy',temp,765.09,678.04)
-        value('entropy',temp, 2.1338,1.9374)
-    elif T == 180:
-        edge(0.0011240,759.47,765.09,2.1338)
-    elif (T > 180) & (T < 200):
-        temp = temp_range(140,160,T)
-        value('volume',temp, 0.0011531,0.0011240)
-        value('internal energy',temp,847.92 ,759.47)
-        value('enthapy',temp,853.68,765.09)
-        value('entropy',temp, 2.3251,2.1338)
-    elif T == 200:
-        edge(0.0011531,847.92,853.68,2.3251)
-    elif (T > 200) & (T < 220):
-        temp = temp_range(140,160,T)
-        value('volume',temp, 0.0011868,0.0011531)
-        value('internal energy',temp, 938.39,853.68)
-        value('enthapy',temp,944.32,853.68)
-        value('entropy',temp, 2.5127,2.3251)
-    elif T == 220:
-        edge(0.0011868,938.39,944.32,2.5127)
-    elif (T > 220) & (T < 240):
-        temp = temp_range(140,160,T)
-        value('volume',temp, 0.0012268,0.0011868)
-        value('internal energy',temp, 1031.6,938.39)
-        value('enthapy',temp,1037.7,944.32)
-        value('entropy',temp, 2.6983,2.5127)
-    elif T == 240:
-        edge(0.0012268,1031.6,1037.7,2.6983)
-    elif (T > 240) & (T < 260):
-        temp = temp_range(140,160,T)
-        value('volume',temp, 0.0012755,0.0012268)
-        value('internal energy',temp, 1128.5,1031.6)
-        value('enthapy',temp,1134.9,1037.7)
-        value('entropy',temp, 2.8841,2.6983)
-    elif T == 260:
-        edge(0.0012755,1128.5,1134.9,2.8841)
+
 
 #Spencer: The following code covers the pressure = 10 and temperatures 0- 140.
 if (P == 10) and (T <= 300):
