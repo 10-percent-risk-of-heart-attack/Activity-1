@@ -64,9 +64,242 @@ if (P == 5) & (T >= 140) &(T <= 260):
         value('entropy',temp, 2.8841,2.6983)
     elif T == 260:
         edge(0.0012755,1128.5,1134.9,2.8841)
+
+#Spencer: The following code covers the pressure = 10 and temperatures 0- 140.
+if (P == 10) and (T <= 300):
+    if(T == 0):
+        Volume2 = .0009952# final volume
+        Internal_Energy2 = .12# final internal energy
+        Enthalpy2 = 10.07# final enthalpy
+        Entropy2 = .0003# final entropy
+    
+    elif(T > 0) and (T < 20):
+        Tmax = 20# maximum temperature for the range of input temperature(T)
+        Tmin = 0# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0009973# maximum volume
+        Vmin = .0009952# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 83.31# maximum internal energy
+        IEmin = .12# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 93.28# maximum enthalpy
+        Enthalpy_min = 10.07# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = .2943# maximum entropy
+        Entropy_min = .0003# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 20):
+        Volume2 = .0009973# final volume
+        Internal_Energy2 = 83.31# final internal energy
+        Enthalpy2 = 93.28# final enthalpy
+        Entropy2 = .2943# final entropy
+    
+    elif(T > 20) and (T < 40):
+        Tmax = 40# maximum temperature for the range of input temperature(T)
+        Tmin = 20# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010035# maximum volume
+        Vmin = .0009973# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 166.33# maximum internal energy
+        IEmin = 83.31# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 176.37# maximum enthalpy
+        Enthalpy_min = 93.28# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = .5685# maximum entropy
+        Entropy_min = .2943# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 40):
+        Volume2 = .0010035# final volume
+        Internal_Energy2 = 166.33# final internal energy
+        Enthalpy2 = 176.37# final enthalpy
+        Entropy2 = .5685# final entropy
+    
+    elif(T > 40) and (T < 60):
+        Tmax = 60# maximum temperature for the range of input temperature(T)
+        Tmin = 40# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010127# maximum volume
+        Vmin = .0010035# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 249.43# maximum internal energy
+        IEmin = 166.33# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 259.55# maximum enthalpy
+        Enthalpy_min = 176.37# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = .826# maximum entropy
+        Entropy_min = .5685# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 60):
+        Volume2 = .0010127# final volume
+        Internal_Energy2 = 249.43# final internal energy
+        Enthalpy2 = 259.55# final enthalpy
+        Entropy2 = .826# final entropy
+    
+    elif(T > 60) and (T < 80):
+        Tmax = 80# maximum temperature for the range of input temperature(T)
+        Tmin = 60# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010244# maximum volume
+        Vmin = .0010127# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 332.69# maximum internal energy
+        IEmin = 249.43# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 342.94# maximum enthalpy
+        Enthalpy_min = 259.55# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = 1.0691# maximum entropy
+        Entropy_min = .826# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 80):
+        Volume2 = .0010244# final volume
+        Internal_Energy2 = 332.69# final internal energy
+        Enthalpy2 = 342.94# final enthalpy
+        Entropy2 = 1.0691# final entropy
+    
+    elif(T > 80) and (T < 100):
+        Tmax = 100# maximum temperature for the range of input temperature(T)
+        Tmin = 80# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010385# maximum volume
+        Vmin = .0010244# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 416.23# maximum internal energy
+        IEmin = 332.69# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 426.62# maximum enthalpy
+        Enthalpy_min = 342.94# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = 1.2996# maximum entropy
+        Entropy_min = 1.0691# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 100):
+        Volume2 = .0010385# final volume
+        Internal_Energy2 = 416.23# final internal energy
+        Enthalpy2 = 426.62# final enthalpy
+        Entropy2 = 1.2996# final entropy
+    
+    elif(T > 100) and (T < 120):
+        Tmax = 120# maximum temperature for the range of input temperature(T)
+        Tmin = 100# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010549# maximum volume
+        Vmin = .0010385# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 500.18# maximum internal energy
+        IEmin = 416.23# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 510.73# maximum enthalpy
+        Enthalpy_min = 426.62# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = 1.5191# maximum entropy
+        Entropy_min = 1.2996# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 120):
+        Volume2 = .0010549# final volume
+        Internal_Energy2 = 500.18# final internal energy
+        Enthalpy2 = 510.73# final enthalpy
+        Entropy2 = 1.5191# final entropy
+    
+    elif(T > 120) and (T < 140):
+        Tmax = 140# maximum temperature for the range of input temperature(T)
+        Tmin = 120# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010738# maximum volume
+        Vmin = .0010549# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 584.72# maximum internal energy
+        IEmin = 500.18# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 595.45# maximum enthalpy
+        Enthalpy_min = 510.73# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = 1.7293# maximum entropy
+        Entropy_min = 1.5191# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+    
+    elif(T == 140):
+        Volume2 = .0010738# final volume
+        Internal_Energy2 = 584.72# final internal energy
+        Enthalpy2 = 595.45# final enthalpy
+        Entropy2 = 1.7293# final entropy
+    
+    elif(T > 140) and (T < 160):
+        Tmax = 160# maximum temperature for the range of input temperature(T)
+        Tmin = 140# minimum temperature for the range of input temperature(T)
+        Trange = (T - Tmin) / (Tmax - T) # This variable makes the process of 
+        # calculating each final output less work because all of the equations 
+        # have this section within them, so we can make it one variable to solve first.
+        
+        Vmax = .0010954# maximum volume
+        Vmin = .0010738# minimum volume
+        Volume2 = ((Trange) * (Vmax - Vmin)) + Vmin # final volume
+        
+        IEmax = 670.06# maximum internal energy
+        IEmin = 584.72# minimum internal energy 
+        Internal_Energy2 = ((Trange) * (IEmax - IEmin)) + IEmin # final internal energy
+        
+        Enthalpy_max = 681.01# maximum enthalpy
+        Enthalpy_min = 595.45# minimum enthalpy
+        Enthalpy2 = ((Trange) * (Enthalpy_max - Enthalpy_min)) + Enthalpy_min # final enthalpy
+        
+        Entropy_max = 1.9316# maximum entropy
+        Entropy_min = 1.7293# minimum entropy
+        Entropy2 = ((Trange) * (Entropy_max - Entropy_min)) + Entropy_min # final entropy
+
 #Joshua: The following code covers the pressure = 10 and temperatures 160-300.
-T = int(input('Please input the temperature: '))
-P = int(input('Please input the pressure: '))
 if P == 10 and (T <= 300):
     if (T > 160) and (T <180):
         T_min = 160
