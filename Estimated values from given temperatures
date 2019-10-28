@@ -1,6 +1,288 @@
+
 #P = 5, T = [140,260]
 T = float(input('Input temperature: '))
 P = float(input('Pressure: '))
+
+
+if (P > 0) and (P <= 5) and (T <= 260):
+    if T == 0:
+        V = 0.0009977
+        IE = 0.04
+        Enthalpy = 5.03
+        Entropy = 0.0001
+    if T > 0 and T < 20:
+        Tmin = 0
+        Tmax = 20
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0009977
+        Vmax = 0.0009996
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 0.04
+        IEmax = 83.61
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 5.03
+        Enthalpymax = 88.61
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 0.0001
+        Entropymax = 0.2954
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 20:
+        V = 0.0009996
+        IE = 83.61
+        Enthalpy = 88.61
+        Entropy = 0.2954
+    if T > 20 and T < 40:
+        Tmin = 20
+        Tmax = 40
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0009996
+        Vmax = 0.0010057
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 83.61
+        IEmax = 166.92
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 88.61
+        Enthalpymax = 171.95
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 0.2954
+        Entropymax = 0.5705
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 40:
+        V = 0.0010057
+        IE = 166.92
+        Enthalpy = 171.95
+        Entropy = 0.5705
+    if T > 40 and T < 60:
+        Tmin = 40
+        Tmax = 60
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010057
+        Vmax = 0.0010149
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 166.92
+        IEmax = 250.29
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 171.95
+        Enthalpymax = 255.36
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 0.5705
+        Entropymax = 0.8287
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 60:
+        V = 0.0010149
+        IE = 250.29
+        Enthalpy = 255.36
+        Entropy = 0.8287
+    if T > 60 and T < 80:
+        Tmin = 60
+        Tmax = 80
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010149
+        Vmax = 0.0010267
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 250.29
+        IEmax = 333.82
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 255.36
+        Enthalpymax = 338.96
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 0.8287
+        Entropymax = 1.0723
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 80:
+        V = 0.0010267
+        IE = 333.82
+        Enthalpy = 338.96
+        Entropy = 1.0723
+    if T > 80 and T < 100:
+        Tmin = 80
+        Tmax = 100
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010267
+        Vmax = 0.0010410
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 333.82
+        IEmax = 417.65
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 338.96
+        Enthalpymax = 422.85
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 1.0723
+        Entropymax = 1.3034
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 100:
+        V = 0.0010410
+        IE = 417.65
+        Enthalpy = 422.85
+        Entropy = 1.3034
+    if T > 100 and T < 120:
+        Tmin = 100
+        Tmax = 120
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010410
+        Vmax = 0.0010576
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 417.65
+        IEmax = 501.91
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 422.85
+        Enthalpymax = 507.19
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 1.3034
+        Entropymax = 1.5236
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 120:
+        V = 0.0010576
+        IE = 501.91
+        Enthalpy = 507.19
+        Entropy = 1.5236
+    if T > 120 and T < 140:
+        Tmin = 120
+        Tmax = 140
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010576
+        Vmax = 0.0010769
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 501.91
+        IEmax = 586.80
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 507.19
+        Enthalpymax = 592.18
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 1.5236
+        Entropymax = 1.7344
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 140:
+        V = 0.0010769
+        IE = 586.80
+        Enthalpy = 592.18
+        Entropy = 1.7344
+    if T > 140 and T < 160:
+        Tmin = 140
+        Tmax = 160
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010769
+        Vmax = 0.0010988
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 586.80
+        IEmax = 672.55
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 592.18
+        Enthalpymax = 678.04
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 1.7344
+        Entropymax = 1.9374
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 160:
+        V = 0.0010988
+        IE = 672.55
+        Enthalpy = 678.04
+        Entropy = 1.9374
+    if T > 160 and T < 180:
+        Tmin = 160
+        Tmax = 180
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0010988
+        Vmax = 0.0011240
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 672.55
+        IEmax = 759.47
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 678.04
+        Enthalpymax = 765.09
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 1.9374
+        Entropymax = 2.1338
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 180:
+        V = 0.0011240
+        IE = 672.55
+        Enthalpy = 765.09
+        Entropy = 2.1338
+    if T > 180 and T < 200:
+        Tmin = 180
+        Tmax = 200
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0011240
+        Vmax = 0.0011531
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 759.47
+        IEmax = 847.92
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 765.09
+        Enthalpymax = 853.68
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 2.1338
+        Entropymax = 2.3251
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 200:
+        V = 0.0011531
+        IE = 847.92
+        Enthalpy = 853.68
+        Entropy = 2.3251
+    if T > 200 and T < 220:
+        Tmin = 200
+        Tmax = 220
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0011531
+        Vmax = 0.0011868
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 847.92
+        IEmax = 938.39
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 853.68
+        Enthalpymax = 944.32
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 2.3251
+        Entropymax = 2.5127
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 220:
+        V = 0.0011868
+        IE = 938.39
+        Enthalpy = 944.32
+        Entropy = 2.5127
+    if T > 220 and T < 240:
+        Tmin = 220
+        Tmax = 240
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0011868
+        Vmax = 0.0012268
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 938.39
+        IEmax = 1031.6
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 944.32
+        Enthalpymax = 1037.7
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 2.5127
+        Entropymax = 2.6983
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 240:
+        V = 0.0012268
+        IE = 1031.6
+        Enthalpy = 1037.7
+        Entropy = 2.6983
+    if T > 240 and T < 260:
+        Tmin = 240
+        Tmax = 260
+        Temp_Range = (T - Tmin)/(Tmax - T)
+        Vmin = 0.0012268
+        Vmax = 0.0012755
+        V = Temp_Range * (Vmax - Vmin) + Vmin
+        IEmin = 1031.6
+        IEmax = 1128.5
+        IE = Temp_Range * (IEmax - IEmin) + IEmin
+        Enthalpymin = 1037.7
+        Enthalpymax = 1134.9
+        Enthalpy = Temp_Range * (Enthalpymax - Enthalpymin) + Enthalpymin
+        Entropymin = 2.6983
+        Entropymax = 2.8841
+        Entropy = Temp_Range * (Entropymax - Entropymin) + Entropymin
+    if T == 260:
+        V = 0.0012755
+        IE = 1128.5
+        Enthalpy = 1134.9
+        Entropy = 2.8841
 
 def temp_range(temp_min,temp_max,temp):
     range_temp = (temp - temp_min)/(temp_max-temp)
