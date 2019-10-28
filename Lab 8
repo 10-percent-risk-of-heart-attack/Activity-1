@@ -1,0 +1,223 @@
+#P = 5, T = [140,260]
+T = float(input('Input temperature: '))
+P = float(input('Pressure: '))
+
+def temp_range(temp_min,temp_max,temp):
+    range_temp = (temp - temp_min)/(temp_max-temp)
+    return range_temp
+def value(string, temp_range, v_max, v_min):
+    value = (temp_range)*(v_max - v_min) + v_min
+    print('The estimated %s is %f.' %(string,value))
+def edge (volume,in_energy,enthapy,entropy):
+    print('The exact volume is %f'%volume)
+    print('The exact internal energy is %f'%in_energy)
+    print('The exact enthapy is %f'%enthapy)
+    print('The exact entropy is %f'%entropy)
+if (P == 5) & (T >= 140) &(T <= 260):
+    if T == 140:
+        edge(0.0010768,586.8,592.18,1.7344)
+    elif (T > 140) & (T < 160):
+        temp = temp_range(140,160,T)
+        value('volume',temp, 0.0010988,0.0010769)
+        value('internal energy',temp, 672.55,586.8)
+        value('enthapy',temp,678.04,592.18)
+        value('entropy',temp, 1.9374,1.7344)
+    elif T == 160:
+        edge(0.0010988,672.55,678.04,1.9374)
+    elif (T > 160) & (T < 180):
+        temp = temp_range(140,160,T)
+        value('volume',temp, 0.0011240,0.0010988)
+        value('internal energy',temp, 759.47,672.55)
+        value('enthapy',temp,765.09,678.04)
+        value('entropy',temp, 2.1338,1.9374)
+    elif T == 180:
+        edge(0.0011240,759.47,765.09,2.1338)
+    elif (T > 180) & (T < 200):
+        temp = temp_range(140,160,T)
+        value('volume',temp, 0.0011531,0.0011240)
+        value('internal energy',temp,847.92 ,759.47)
+        value('enthapy',temp,853.68,765.09)
+        value('entropy',temp, 2.3251,2.1338)
+    elif T == 200:
+        edge(0.0011531,847.92,853.68,2.3251)
+    elif (T > 200) & (T < 220):
+        temp = temp_range(140,160,T)
+        value('volume',temp, 0.0011868,0.0011531)
+        value('internal energy',temp, 938.39,853.68)
+        value('enthapy',temp,944.32,853.68)
+        value('entropy',temp, 2.5127,2.3251)
+    elif T == 220:
+        edge(0.0011868,938.39,944.32,2.5127)
+    elif (T > 220) & (T < 240):
+        temp = temp_range(140,160,T)
+        value('volume',temp, 0.0012268,0.0011868)
+        value('internal energy',temp, 1031.6,938.39)
+        value('enthapy',temp,1037.7,944.32)
+        value('entropy',temp, 2.6983,2.5127)
+    elif T == 240:
+        edge(0.0012268,1031.6,1037.7,2.6983)
+    elif (T > 240) & (T < 260):
+        temp = temp_range(140,160,T)
+        value('volume',temp, 0.0012755,0.0012268)
+        value('internal energy',temp, 1128.5,1031.6)
+        value('enthapy',temp,1134.9,1037.7)
+        value('entropy',temp, 2.8841,2.6983)
+    elif T == 260:
+        edge(0.0012755,1128.5,1134.9,2.8841)
+#Joshua: The following code covers the pressure = 10 and temperatures 160-300.
+T = int(input('Please input the temperature: '))
+P = int(input('Please input the pressure: '))
+if P == 10 and (T <= 300):
+    if (T > 160) and (T <180):
+        T_min = 160
+        T_max = 180
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0010954
+        V_max2 = 0.0011200
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 670.06
+        IE_max2 = 756.48
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 681.01
+        Enthalpy_max2 = 767.68
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 1.9316
+        Entropy_max2 = 2.1271
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2
+    elif T == 180:
+        volume2 = 0.0011200
+        Internal_Energy2 = 756.48
+        Enthalpy2 = 767.68
+        Entropy2 = 2.1271
+    elif (T > 180) and (T < 200):
+        T_min = 180
+        T_max = 200
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0011200
+        V_max2 = 0.0011482
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 756.48
+        IE_max2 = 844.32
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 767.68
+        Enthalpy_max2 = 855.8
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 2.1271
+        Entropy_max2 = 2.3174
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2
+    elif (T == 200):
+        volume2 = 0.0011482
+        Internal_Energy2 = 844.32
+        Enthalpy2 = 855.8
+        Entropy2 = 2.3174        
+    elif (T > 200) and (T < 220):
+        T_min = 200
+        T_max = 220
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0011482
+        V_max2 = 0.0011809
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 844.32
+        IE_max2 = 934.01
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 855.8
+        Enthalpy_max2 = 945.82
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 2.3174
+        Entropy_max2 = 2.5037
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2
+    elif (T == 220):
+        volume2 = 0.0011809
+        Internal_Energy2 = 934.01
+        Enthalpy2 = 945.82
+        Entropy2 = 2.5037
+    elif (T > 220) and (T < 240):
+        T_min = 220
+        T_max = 240
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0011809
+        V_max2 = 0.0012192
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 934.01
+        IE_max2 = 1026.2
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 945.82
+        Enthalpy_max2 = 1038.3
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 2.5037
+        Entropy_max2 = 2.6876
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2  
+    elif (T == 240):
+        volume2 = 0.0012192
+        Internal_Energy2 = 1026.2
+        Enthalpy2 = 1038.3
+        Entropy2 = 2.6876
+    elif (T > 240) and (T< 260):
+        T_min = 240
+        T_max = 260
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0012192
+        V_max2 = 0.0012653
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 1026.2
+        IE_max2 = 1121.6
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 1038.3
+        Enthalpy_max2 = 1134.3
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 2.6876
+        Entropy_max2 = 2.871
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2
+    elif (T == 260):
+        volume2 = 0.0012653
+        Internal_Energy2 = 1121.6
+        Enthalpy2 = 1134.3
+        Entropy2 = 2.871
+    elif (T > 260) and (T < 280):
+        T_min = 260
+        T_max = 280
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0012653
+        V_max2 = 0.0013226
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 1121.6
+        IE_max2 = 1221.8
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 1134.3
+        Enthalpy_max2 = 1235
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 2.871
+        Entropy_max2 = 3.0565
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2
+    elif (T == 280):
+        volume2 = 0.0013226
+        Internal_Energy2 = 1221.8
+        Enthalpy2 = 1235
+        Entropy2 = 3.0565
+    elif (T > 280) and (T < 300):
+        T_min = 280
+        T_max = 300
+        T_range = (T - T_min) / (T_max - T)
+        V_min2 = 0.0013226
+        V_max2 = 0.0013980
+        Volume2 = ((T_range) * (V_max2 - V_min2)) + V_min2
+        IE_min2 = 1221.8
+        IE_max2 = 1329.4
+        Internal_Energy2 = ((T_range) * (IE_max2 - IE_min2)) + IE_min2
+        Enthalpy_min2 = 1235
+        Enthalpy_max2 = 1343.3
+        Enthalpy2 = ((T_range) * (Enthalpy_max2 - Enthalpy_min2)) + Enthalpy_min2
+        Entropy_min2 = 3.0565
+        Entropy_max2 = 3.2488
+        Entropy2 = ((T_range) * (Entropy_max2 - Entropy_min2)) + Entropy_min2
+    elif (T == 300):
+        volume2 = 0.0013980
+        Internal_Energy2 = 1329.4
+        Enthalpy2 = 1343.3
+        Entropy2 = 3.2488
+    else:
+        print('The Temperature entered does not meet set temperature values.')
+print('Volume is: ', Volume2)
+print('Internal Energy is: ', Internal_Energy2)
+print('Enthalpy is: ', Enthalpy2)
+print('Entropy is: ', Entropy2)
