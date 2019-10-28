@@ -4,12 +4,11 @@ T = float(input('Input temperature: '))
 P = float(input('Pressure: '))
 
 # Caden Mueller: The following code cover the pressure = 5 and temperature 0 - 140
-if (P > 0) and (P <= 5) and (T <= 260):
     if T == 0:
         Volume1 = 0.0009977
-        IE = 0.04
-        Enthalpy = 5.03
-        Entropy = 0.0001
+        Internal_Energy1 = 0.04
+        Enthalpy1 = 5.03
+        Entropy1 = 0.0001
     if T > 0 and T < 20:
         T_min = 0
         T_max = 20
@@ -22,15 +21,15 @@ if (P > 0) and (P <= 5) and (T <= 260):
         IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 5.03
         Enthalpy_max1 = 88.61
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 0.0001
         Entropy_max1 = 0.2954
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 20:
-        Volume = 0.0009996
-        IE = 83.61
-        Enthalpy = 88.61
-        Entropy = 0.2954
+        Volume1 = 0.0009996
+        Internal_Energy1 = 83.61
+        Enthalpy1 = 88.61
+        Entropy1 = 0.2954
     if T > 20 and T < 40:
         T_min = 20
         T_max = 40
@@ -49,51 +48,51 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 40:
         Volume1 = 0.0010057
-        IE = 166.92
-        Enthalpy = 171.95
-        Entropy = 0.5705
+        Internal_Energy1 = 166.92
+        Enthalpy1 = 171.95
+        Entropy1 = 0.5705
     if T > 40 and T < 60:
         T_min = 40
         T_max = 60
         Temp_Range = (T - T_min)/(T_max - T)
         V_min1 = 0.0010057
         V_max1 = 0.0010149
-        Volume = Temp_Range * (V_max1 - V_min1) + V_min1
+        Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 166.92
         IE_max1 = 250.29
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 171.95
         Enthalpy_max1 = 255.36
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 0.5705
         Entropy_max1 = 0.8287
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 60:
-        Volume = 0.0010149
-        IE = 250.29
+        Volume1 = 0.0010149
+        Internal_Energy1 = 250.29
         Enthalpy = 255.36
-        Entropy = 0.8287
+        Entropy11 = 0.8287
     if T > 60 and T < 80:
         T_min = 60
         T_max = 80
         Temp_Range = (T - T_min)/(T_max - T)
         V_min1 = 0.0010149
         V_max1 = 0.0010267
-        Volume = Temp_Range * (V_max1 - V_min1) + V_min1
+        Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 250.29
         IE_max1 = 333.82
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 255.36
         Enthalpy_max1 = 338.96
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 0.8287
         Entropy_max1 = 1.0723
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 80:
-        V = 0.0010267
-        IE = 333.82
-        Enthalpy = 338.96
-        Entropy = 1.0723
+        Volume1 = 0.0010267
+        Internal_Energy1 = 333.82
+        Enthalpy1 = 338.96
+        Entropy1 = 1.0723
     if T > 80 and T < 100:
         T_min = 80
         T_max = 100
@@ -103,39 +102,39 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 333.82
         IE_max1 = 417.65
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 338.96
         Enthalpy_max1 = 422.85
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 1.0723
         Entropy_max1 = 1.3034
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 100:
-        Volume = 0.0010410
-        IE = 417.65
-        Enthalpy = 422.85
-        Entropy = 1.3034
+        Volume1 = 0.0010410
+        Internal_Energy1 = 417.65
+        Enthalpy1 = 422.85
+        Entropy1 = 1.3034
     if T > 100 and T < 120:
         T_min = 100
         T_max = 120
         Temp_Range = (T - T_min)/(T_max - T)
         V_min1 = 0.0010410
         V_max1 = 0.0010576
-        Volume = Temp_Range * (V_max1 - V_min1) + V_min1
+        Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 417.65
         IE_max1 = 501.91
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 422.85
         Enthalpy_max1 = 507.19
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 1.3034
         Entropy_max1 = 1.5236
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 120:
         Volume1 = 0.0010576
-        IE = 501.91
-        Enthalpy = 507.19
-        Entropy = 1.5236
+        Internal_Energy1 = 501.91
+        Enthalpy1 = 507.19
+        Entropy1 = 1.5236
     if T > 120 and T < 140:
         T_min = 120
         T_max = 140
@@ -145,18 +144,18 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 501.91
         IE_max1 = 586.80
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 507.19
         Enthalpy_max1 = 592.18
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 1.5236
         Entropy_max1 = 1.7344
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 140:
         Volume1 = 0.0010769
-        IE = 586.80
-        Enthalpy = 592.18
-        Entropy = 1.7344
+        Internal_Energy1 = 586.80
+        Enthalpy1 = 592.18
+        Entropy1 = 1.7344
     if T > 140 and T < 160:
         T_min = 140
         T_max = 160
@@ -166,18 +165,18 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 586.80
         IE_max1 = 672.55
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 592.18
         Enthalpy_max1 = 678.04
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 1.7344
         Entropy_max1 = 1.9374
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 160:
         Volume1 = 0.0010988
-        IE = 672.55
-        Enthalpy = 678.04
-        Entropy = 1.9374
+        Internal_Energy1 = 672.55
+        Enthalpy1 = 678.04
+        Entropy1 = 1.9374
     if T > 160 and T < 180:
         T_min = 160
         T_max = 180
@@ -187,18 +186,18 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 672.55
         IE_max1 = 759.47
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 678.04
         Enthalpy_max1 = 765.09
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 1.9374
         Entropy_max1 = 2.1338
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 180:
         Volume1 = 0.0011240
-        IE = 672.55
-        Enthalpy = 765.09
-        Entropy = 2.1338
+        Internal_Energy1 = 672.55
+        Enthalpy1 = 765.09
+        Entropy1 = 2.1338
     if T > 180 and T < 200:
         T_min = 180
         T_max = 200
@@ -208,18 +207,18 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 759.47
         IE_max1 = 847.92
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 765.09
         Enthalpy_max1 = 853.68
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 2.1338
         Entropy_max1 = 2.3251
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 200:
         Volume1 = 0.0011531
-        IE = 847.92
-        Enthalpy = 853.68
-        Entropy = 2.3251
+        Internal_Energy1 = 847.92
+        Enthalpy1 = 853.68
+        Entropy1 = 2.3251
     if T > 200 and T < 220:
         T_min = 200
         T_max = 220
@@ -229,18 +228,18 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 847.92
         IE_max1 = 938.39
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 853.68
         Enthalpy_max1 = 944.32
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 2.3251
         Entropy_max1 = 2.5127
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 220:
         Volume1 = 0.0011868
-        IE = 938.39
-        Enthalpy = 944.32
-        Entropy = 2.5127    
+        Internal_Energy1 = 938.39
+        Enthalpy1 = 944.32
+        Entropy1 = 2.5127    
     if T > 220 and T < 240:
         T_min = 220
         T_max = 240
@@ -250,18 +249,18 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 938.39
         IE_max1 = 1031.6
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 944.32
         Enthalpy_max1 = 1037.7
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 2.5127
         Entropy_max1 = 2.6983
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) + Entropy_min1
     if T == 240:
-        V = 0.0012268
-        IE = 1031.6
-        Enthalpy = 1037.7
-        Entropy = 2.6983
+        Volume1 = 0.0012268
+        Internal_Energy1 = 1031.6
+        Enthalpy1 = 1037.7
+        Entropy1 = 2.6983
     if T > 240 and T < 260:
         T_min = 240
         T_max = 260
@@ -271,18 +270,19 @@ if (P > 0) and (P <= 5) and (T <= 260):
         Volume1 = Temp_Range * (V_max1 - V_min1) + V_min1
         IE_min1 = 1031.6
         IE_max1 = 1128.5
-        IE = Temp_Range * (IE_max1 - IE_min1) + IE_min1
+        Internal_Energy1 = Temp_Range * (IE_max1 - IE_min1) + IE_min1
         Enthalpy_min1 = 1037.7
         Enthalpy_max1 = 1134.9
-        Enthalpy = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
+        Enthalpy1 = Temp_Range * (Enthalpy_max1 - Enthalpy_min1) + Enthalpy_min1
         Entropy_min1 = 2.6983
         Entropy_max1 = 2.8841
-        Entropy = Temp_Range * (Entropy_max1 - Entropy_min1) 
+        Entropy1 = Temp_Range * (Entropy_max1 - Entropy_min1) 
     if T == 260:
-        V = 0.0012755
-        IE = 1128.5
-        Enthalpy = 1134.9
-        Entropy = 2.8841
+        Volume1 = 0.0012755
+        Internal_Energy1 = 1128.5
+        Enthalpy1 = 1134.9
+        Entropy1 = 2.8841
+
 
 
 
